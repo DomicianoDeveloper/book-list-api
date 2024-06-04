@@ -66,10 +66,3 @@ This project is a simple Node.js application that manages a list of books. The A
     - Status: 500 Internal server error
 
 Please note that this is a basic API documentation for the given project. Depending on the specific implementation, additional endpoints or modifications may be required.
-
-````
-
-```
-
-```
-````
