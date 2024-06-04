@@ -139,7 +139,7 @@ app.put("/:id", function (req, res) {
     const index = books.findIndex((value) => value.id === id);
 
     if (!books[index]) {
-      return res.status(400).send({
+      return res.status(404).send({
         success: false,
         message: "Book not found",
       });
@@ -151,7 +151,7 @@ app.put("/:id", function (req, res) {
       price,
     };
 
-    return res.status(201).send({
+    return res.status(200).send({
       success: true,
       message: "Book updated",
     });
@@ -181,7 +181,7 @@ app.delete("/:id", function (req, res) {
     const index = books.findIndex((value) => value.id === id);
 
     if (index === -1) {
-      return res.status(400).send({
+      return res.status(404).send({
         success: false,
         message: "Book not found",
       });
@@ -189,7 +189,7 @@ app.delete("/:id", function (req, res) {
 
     books.splice(index, 1);
 
-    return res.status(202).send({
+    return res.status(200).send({
       success: true,
       message: "Book deleted",
     });
