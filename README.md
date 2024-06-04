@@ -20,9 +20,9 @@ This project is a simple Node.js application that manages a list of books. The A
 
 ```json
 {
-    "success": "bolean",
-    "message": "string",
-    "data": "object" - Only when returning is necessary
+  "success": "boolean",
+  "message": "string",
+  "data": "object"
 }
 ```
 
@@ -31,13 +31,14 @@ This project is a simple Node.js application that manages a list of books. The A
 - `GET /`
 
   - Retrieves all books from the list.
-  - Response:
-    - Status: 200 OK
-    - Status: 500 Internal server error
-  - Query Parameters
+  - Query Parameters (optional)
     - id: string
     - name: string
     - price: number
+  - Response:
+    - Status: 200 OK
+    - Status: 500 Internal server error
+    - Data object: array of all found books
 
 - `POST /`
 
